@@ -26,4 +26,13 @@ nums2.length == n
 1 <= m + n <= 2000
 -106 <= nums1[i], nums2[i] <= 106
 """
-
+import math
+def findMedianSortedArrays(nums1, nums2):
+    nums1.extend(nums2)
+    newNums = sorted(nums1)
+    lenOfnewNums = len(newNums)
+    if lenOfnewNums % 2 == 0:
+        return (newNums[(lenOfnewNums//2) - 1] + newNums[((lenOfnewNums//2)+1)-1])/2
+    else:
+        return newNums[math.ceil(lenOfnewNums/2)-1]
+print(findMedianSortedArrays([1,2],[3,4]))
