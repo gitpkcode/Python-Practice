@@ -20,7 +20,7 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 """
 
-def twoSum(nums,target):
+def twoSum(nums,target) -> list:
     hashmap = {}
     for i in range(len(nums)):
         hashmap[nums[i]] = i
